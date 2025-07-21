@@ -118,8 +118,7 @@ Ingesting happens **on container startup**, ensuring the latest documents are al
 
 ## 📄 License
 
-MIT License
-
+Apache-2.0 license
 ---
 
 ## ✨ Credits

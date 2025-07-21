@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: always
+    pull_policy: if_not_present
+
+  chatbot:
+    image: chatbot
+    depends_on:
+      - ollama
+    volumes:
+      - ./docs:/app/data
+      - ./faiss_index:/app/faiss_index
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python ingest.py && uvicorn app:app --host 0.0.0.0 --port 8000"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+
+volumes:
+  ollama:

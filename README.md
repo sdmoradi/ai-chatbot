@@ -1,4 +1,4 @@
-# 📚 Document-Based AI Chatbot with LangChain + FAISS + Ollama + FastAPI
+# Document-Based AI Chatbot
 
 This is a simple, fast, and lightweight **RAG (Retrieval-Augmented Generation)** chatbot that answers questions **only using your own documents** (PDF or TXT). It uses:
 

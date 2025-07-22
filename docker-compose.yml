@@ -3,6 +3,7 @@ version: "3.8"
 services:
   ollama:
     image: ollama/ollama
+    # runtime: nvidia # Optional but important
     volumes:
       - ollama:/root/.ollama
     ports:

@@ -103,6 +103,18 @@ If not found:
 | `OLLAMA_BASE_URL`| `http://ollama:11434`  | Ollama backend URL       |
 
 ---
+## ⚡️ GPU Support (optional)
+
+If you have an NVIDIA GPU (e.g. 3090), you **must** use the `nvidia` runtime in Docker.
+
+### 1. Install NVIDIA Docker Toolkit:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
+```
+---
 
 ## 📦 Build Notes
 
